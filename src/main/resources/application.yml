@@ -1,15 +1,30 @@
-#spring:
-#  main:
-#    allow-bean-definition-overriding: true
-
 spring:
-  security:
-    oauth2:
-      client:
-        registration:
-          google:
-            client-id: 828164564455-ab6dgd7ik14ank0ah6a3l5prp9d5u9c1.apps.googleusercontent.com
-            client-secret: 2Y7deTrkNMekCBVkKS0-88oA
+  main:
+    allow-bean-definition-overriding: true
+
+google:
+  client:
+    client-id: 828164564455-ab6dgd7ik14ank0ah6a3l5prp9d5u9c1.apps.googleusercontent.com
+    client-secret: 2Y7deTrkNMekCBVkKS0-88oA
+    tokenName: oauth_token
+    accessTokenUri: https://oauth2.googleapis.com/token
+    userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
+    scope: openid email profile
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+    pre-established-redirect-uri: https://oauthdebugger.com/debug
+  resource:
+  userInfoUri: https://www.googleapis.com/auth/userinfo.email
+  preferTokenInfo: false
+
+#spring:
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          google:
+#            client-id: 828164564455-ab6dgd7ik14ank0ah6a3l5prp9d5u9c1.apps.googleusercontent.com
+#            client-secret: 2Y7deTrkNMekCBVkKS0-88oA
 #      tokenName: oauth_token
 #      accessTokenUri: https://oauth2.googleapis.com/token
 #      userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
