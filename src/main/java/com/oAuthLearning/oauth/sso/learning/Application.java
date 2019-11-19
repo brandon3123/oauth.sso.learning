@@ -19,6 +19,7 @@ import org.springframework.security.oauth2.client.OAuth2ClientContext;
 import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.security.oauth2.client.filter.OAuth2ClientAuthenticationProcessingFilter;
 import org.springframework.security.oauth2.client.token.grant.code.AuthorizationCodeResourceDetails;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableOAuth2Client;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,12 +27,10 @@ import javax.servlet.Filter;
 import java.util.Arrays;
 
 @SpringBootApplication
-@EnableOAuth2Sso
-@RestController
-public class Application {//extends WebSecurityConfigurerAdapter {
-//
-//	@Qualifier("mine")
+public class Application {
+
 //	@Autowired private OAuth2ClientContext oauth2ClientContext;
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
